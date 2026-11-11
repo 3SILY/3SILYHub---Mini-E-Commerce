@@ -3,6 +3,10 @@ let categoryFilter = document.getElementById("category-filter");
 let cartCount = document.getElementById("cart-count");
 let proContainer = document.getElementById("products-container");
 
+let cartModal = document.getElementById("cart-modal");
+let cartItems = document.getElementById("cart-items");
+let closeCart = document.getElementById("close-cart");
+let cartIcon = document.querySelector(".cart");
 
 let cart = [];
 
@@ -85,9 +89,34 @@ proContainer.addEventListener("click", (event) => {
     } else {
       cart.push({ ...found, quantity: 1 });
     }
-   let count =  cart.reduce((a,b) => {
-      return a + b.quantity
-    },0)
-    cartCount.textContent = count
+    let count = cart.reduce((a, b) => {
+      return a + b.quantity;
+    }, 0);
+    cartCount.textContent = count;
+    displayCart()
   }
 });
+
+cartIcon.addEventListener("click", () => {
+  cartModal.style.display = "block";
+});
+
+closeCart.addEventListener("click", () => {
+  cartModal.style.display = "none";
+});
+
+function displayCart() {
+  cartItems.innerHTML = "";
+  cart.forEach((pro) => {
+    cartItems.innerHTML += `
+  <div class="cart-item">
+  <img src="${pro.thumbnail}">
+  <div>
+    <h3>${pro.title}</h3>
+    <p>${pro.price}</p>
+    <p>Quantity: ${pro.quantity}</p>
+  </div>
+</div>
+  `;
+  });
+}
