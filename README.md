@@ -25,7 +25,7 @@ A simple and responsive e-commerce website built with HTML, CSS, and Vanilla Jav
 
 ## Live Demo
 
-Coming Soon
+https://3sily.github.io/3SILYHub---Mini-E-Commerce/
 
 ## Installation
 
