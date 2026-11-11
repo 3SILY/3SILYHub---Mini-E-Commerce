@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Made by 3SILY</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <p><i class="fa-solid fa-bag-shopping"></i></p>
+          <h1>Shop<span>Hub</span></h1>
+        </div>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            id="search-input"
+            placeholder="Search For Product"
+            type="text"
+          />
+          <select id="category-filter"></select>
+        </div>
+        <div class="cart">
+          <p><i class="fa-solid fa-cart-shopping"></i></p>
+          <small id="cart-count">0</small>
+        </div>
+      </header>
+      <div class="hero-section">
+        <div class="main-content">
+          <p class="best">Best Deals <i class="fa-solid fa-fire"></i></p>
+          <h1 class="smarter">Shop Smarter,</h1>
+          <h1 class="better">Live Better</h1>
+          <p class="des">Discover amazig products at unbeatable prices</p>
+          <div class="shop-now">
+            <button id="shop-now">Shop Now -></button>
+          </div>
+        </div>
+        <div class="img">
+          <img src="ShopHub Purple Shopping Collection.png" alt="" />
+        </div>
+      </div>
+      <section class="products-section">
+        <h1>Our Products</h1>
+        <div id="products-container" class="products-container"></div>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
